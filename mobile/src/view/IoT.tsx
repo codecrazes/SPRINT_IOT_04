@@ -2,7 +2,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { ScrollView, View, Text, ActivityIndicator, Alert, Linking } from 'react-native';
 import axios from 'axios';
 import { Video } from 'expo-av';
-
 import Button from '@components/Button';
 import { useTheme } from '@theme/useTheme';
 

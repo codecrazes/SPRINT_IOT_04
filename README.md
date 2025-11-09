@@ -15,29 +15,6 @@ O sistema simula motos enviando dados de telemetria via **MQTT**, processa tudo 
 
 ---
 
-## 🧱 Arquitetura do Projeto
-
-```bash
-projeto_iot/
-├─ mobile/                # App React Native (Expo) com aba IoT
-└─ iot/
-   ├─ backend/
-   │  ├─ main.py          # API FastAPI (endpoints /api/...)
-   │  ├─ mqtt_client.py   # Cliente MQTT, assina sensores e atualiza Mongo
-   │  ├─ db.py            # Conexão com MongoDB
-   │  ├─ rules.py         # Regras de negócio (status das motos)
-   │  └─ models.py        # Modelos Pydantic (telemetria, comandos, alertas)
-   ├─ iot_simulator/
-   │  └─ multi_simulator_with_diagnostic.py   # Simulador de MOTO1/MOTO2/MOTO3
-   ├─ video/
-   │  └─ Video-Detectacao-Moto.mp4            # Vídeo da visão computacional
-   ├─ docker-compose.yml  # Sobe Mosquitto + MongoDB via Docker
-   ├─ requirements.txt    # Dependências Python (FastAPI, paho-mqtt, etc.)
-   └─ README.md           # (opcional) README específico da pasta IoT
-```
-
----
-
 ## 🔗 Fluxo de Dados (Resumo)
 
 1. **Simulador IoT** (`multi_simulator_with_diagnostic.py`):
@@ -211,34 +188,13 @@ O backend deve logar mensagens indicando que está recebendo e salvando os dados
 
 ### 5️⃣ Configurar o Mobile para falar com o backend IoT
 
-Dentro da pasta `mobile/`:
+Dentro da pasta `mobile/` já existe um arquivo `.env` com as configurações prontas para usar, apontando para o backend IoT e para o vídeo da visão computacional:
 
-1. Crie um arquivo `.env` (na raiz do `mobile`) com:
+```env
+# Configuração IOT + MOBILE
+EXPO_PUBLIC_IOT_URL=http://localhost:8000
+EXPO_PUBLIC_IOT_VIDEO_URL=http://127.0.0.1:8000/api/video/visao
 
-   ```env
-   EXPO_PUBLIC_IOT_URL=http://127.0.0.1:8000
-   ```
-
-2. Instale as dependências (se ainda não fez):
-
-   ```bash
-   cd mobile
-   npm install
-   # ou
-   yarn
-   ```
-
-3. Instalar o pacote para vídeo (já usado na aba IoT):
-
-   ```bash
-   npx expo install expo-av
-   ```
-
-4. Garanta que o vídeo está em:
-
-   ```text
-   mobile/assets/video/Video-Detectacao-Moto.mp4
-   ```
 
 ---
 
@@ -347,8 +303,8 @@ A aba **IoT** possui duas “sub-telas”, selecionadas por botões no topo:
   - Ver se o backend FastAPI está acessível na máquina (`http://127.0.0.1:8000/health`).
 
 - **Vídeo não carrega na aba IoT**  
-  - Conferir o caminho do arquivo: `mobile/assets/video/Video-Detectacao-Moto.mp4`.  
-  - Ver se a importação no `IoT.tsx` aponta para esse caminho.
+  - Conferir o caminho do arquivo: `iot-backend/video/Video-Detectacao-Moto.mp4`.  
+  - Ver se a importação no `IoT.tsx` aponta para configuração do .env.
 
 ---
 
