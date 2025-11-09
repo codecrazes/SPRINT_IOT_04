@@ -1,0 +1,101 @@
+version: "3.9"
+
+services:
+  # -----------------------------------------------------
+  # 🔸 Broker MQTT - comunicação entre simulador e backend
+  # -----------------------------------------------------
+  mosquitto:
+    image: eclipse-mosquitto:2.0.15
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-log:/mosquitto/log
+    restart: unless-stopped
+
+  # -----------------------------------------------------
+  # 🔸 Banco de dados MongoDB
+  # -----------------------------------------------------
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: mottu_iot
+    volumes:
+      - mongo-data:/data/db
+    restart: unless-stopped
+
+  # -----------------------------------------------------
+  # 🔸 Backend FastAPI (API + MQTT client + Twilio)
+  # -----------------------------------------------------
+  backend:
+    build: ./backend
+    container_name: mottu_backend
+    depends_on:
+      - mongo
+      - mosquitto
+    ports:
+      - "8000:8000"
+    environment:
+      # Banco e MQTT
+      MONGO_URL: mongodb://mongo:27017/mottu_iot
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+      # Credenciais Twilio (de preferência usar .env local)
+      TWILIO_SID: ${TWILIO_SID}
+      TWILIO_AUTH: ${TWILIO_AUTH}
+      TWILIO_WHATSAPP: ${TWILIO_WHATSAPP}
+      DESTINO_WHATSAPP: ${DESTINO_WHATSAPP}
+    volumes:
+      - ./backend:/app
+    command: uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload
+    restart: unless-stopped
+
+  # -----------------------------------------------------
+  # 🔸 Simulador IoT (gera dados de telemetria MQTT)
+  # -----------------------------------------------------
+  simulator:
+    build: ./iot_simulator
+    container_name: iot_simulator
+    depends_on:
+      - mosquitto
+      - backend
+    environment:
+      MQTT_BROKER: mosquitto
+      MQTT_PORT: 1883
+    volumes:
+      - ./iot_simulator:/app
+    command: python iot_simulator/multi_simulator.py
+    restart: unless-stopped
+
+  # -----------------------------------------------------
+  # 🔸 Dashboard (opcional - visualização local)
+  # -----------------------------------------------------
+  dashboard:
+    build: ./dashboard
+    container_name: iot_dashboard
+    depends_on:
+      - backend
+      - mongo
+    ports:
+      - "8501:8501"
+    environment:
+      BACKEND_URL: http://backend:8000
+      MONGO_URL: mongodb://mongo:27017/mottu_iot
+    volumes:
+      - ./dashboard:/app
+    command: python dashboard/app.py
+    restart: unless-stopped
+
+# -----------------------------------------------------
+# 🔸 Volumes persistentes
+# -----------------------------------------------------
+volumes:
+  mongo-data:
+  mosquitto-data:
+  mosquitto-log:

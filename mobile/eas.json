@@ -1,0 +1,36 @@
+{
+  "cli": {
+    "version": ">= 10.0.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "preview": {
+      "channel": "preview",
+      "android": {
+        "buildType": "apk",
+        "image": "sdk-54"
+      },
+      "env": {
+        "EXPO_PUBLIC_URL": "https://api-temp-4s06.onrender.com",
+        "EXPO_PUBLIC_PUSH_ENV": "prod",
+        "EXPO_PUBLIC_APIKEY": "AIzaSyDTjBuxfyNof59DgNsot4fAi4Ws2SIigdg",
+        "EXPO_PUBLIC_DB_URL": "https://motohub-web-default-rtdb.firebaseio.com",
+        "EXPO_PUBLIC_EAS_PROJECT_ID": "0c621007-3d86-42ca-b702-d505005a7f0a"
+      }
+    },
+    "production": {
+      "channel": "production",
+      "android": {
+        "buildType": "app-bundle",
+        "image": "sdk-54"
+      },
+      "env": {
+        "EXPO_PUBLIC_URL": "https://api.prod.exemplo.com",
+        "EXPO_PUBLIC_PUSH_ENV": "prod"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

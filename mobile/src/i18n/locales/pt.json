@@ -1,0 +1,191 @@
+{
+  "common": {
+    "close": "Fechar",
+    "learnMore": "Saiba mais",
+    "save": "Salvar",
+    "saving": "Salvando...",
+    "cancel": "Cancelar",
+    "ok": "OK",
+    "edit": "Editar",
+    "remove": "Remover",
+    "removed": "Removido"
+  },
+  "tabs": {
+    "home": "Início",
+    "inventory": "Inventário",
+    "stocks": "Estoques",
+    "profile": "Perfil",
+    "about": "Sobre"
+  },
+  "home": {
+    "welcome": "Bem-vindo!",
+    "models": {
+      "pop": "Econômica",
+      "e": "Elétrica",
+      "sport": "Esportiva"
+    }
+  },
+  "topBar": {
+    "list": "Lista",
+    "grid": "Grade",
+    "searchPlaceholder": "Buscar por título ou placa"
+  },
+  "categories": {
+    "title": "Categorias",
+    "all": "Todas"
+  },
+  "inventory": {
+    "title": "Inventário",
+    "emptyTitle": "Nenhuma moto encontrada",
+    "emptyHintGrid": "Tente alterar os filtros ou pesquise por outro termo.",
+    "emptyHintList": "Adicione itens ou ajuste os filtros de busca.",
+    "errors": {
+      "load": "Falha ao carregar inventário.",
+      "delete": "Falha ao remover item."
+    }
+  },
+  "actions": {
+    "close": "Fechar",
+    "locate": "Localizar",
+    "signIn": "Entrar",
+    "signUp": "Cadastrar",
+    "add": "Adicionar"
+  },
+  "motoDetail": {
+    "plate": "Placa: {{plate}}",
+    "stockTitle": "Estoque",
+    "stockName": "Nome: {{name}}",
+    "stockAddress": "Endereço: {{address}}",
+    "noStock": "Sem estoque vinculado para esta moto."
+  },
+  "addMoto": {
+    "titlePlaceholder": "Título",
+    "platePlaceholder": "Placa",
+    "noStockPlaceholder": "Sem estoque"
+  },
+  "list": {
+    "plate": "Placa: {{plate}}",
+    "remove": "Remover"
+  },
+  "carousel": {
+    "autoDescription": "Conheça mais sobre a {{title}}{{dashSubTitle}}. Veja especificações, vantagens e para quem ela é indicada."
+  },
+  "stocks": {
+    "title": "Estoques",
+    "searchPlaceholder": "Pesquisar por nome/local",
+    "newButton": "Novo",
+    "emptyTitle": "Nenhum estoque encontrado",
+    "emptyHint": "Crie um novo usando o botão “Novo”.",
+    "labels": {
+      "quantity": "Qtd: {{qty}}",
+      "location": "Local: {{location}}"
+    },
+    "modal": {
+      "titleNew": "Novo estoque",
+      "titleEdit": "Editar estoque",
+      "name": "Nome",
+      "quantity": "Quantidade",
+      "location": "Local (opcional)"
+    },
+    "toast": {
+      "created": "Estoque criado",
+      "updated": "Estoque atualizado"
+    },
+    "errors": {
+      "generic": "Não foi possível concluir a operação.",
+      "load": "Falha ao carregar estoques.",
+      "create": "Falha ao criar estoque.",
+      "update": "Falha ao atualizar estoque.",
+      "delete": "Falha ao remover estoque."
+    }
+  },
+  "profile": {
+    "title": "Meu Perfil",
+    "session": {
+      "title": "Sessão",
+      "loggedEmail": "E-mail logado: {{email}}",
+      "signOut": "Sair da conta",
+      "signOutQuestion": "Deseja sair da conta?"
+    },
+    "data": {
+      "title": "Dados do Perfil (Firebase)",
+      "namePlaceholder": "Nome",
+      "nameTooShort": "Mínimo de 2 caracteres",
+      "nameLabel": "Nome:",
+      "emailLabel": "Email:",
+      "edit": "Editar Perfil"
+    },
+    "language": { "title": "Idioma" },
+    "appearance": { "title": "Aparência" },
+    "toast": { "updated": "Perfil atualizado" },
+    "errors": {
+      "load": "Erro ao carregar perfil.",
+      "save": "Erro ao salvar perfil."
+    }
+  },
+  "auth": {
+    "errors": {
+      "emailExists": "E-mail já cadastrado.",
+      "invalidCredentials": "Credenciais inválidas.",
+      "tooManyAttempts": "Muitas tentativas. Tente mais tarde.",
+      "generic": "Ocorreu um erro ao autenticar."
+    }
+  },
+  "moto": {
+    "errors": {
+      "generic": "Não foi possível concluir a operação. Tente novamente."
+    }
+  },
+  "user": {
+    "errors": {
+      "notFound": "Usuário não encontrado.",
+      "load": "Falha ao carregar perfil.",
+      "update": "Falha ao atualizar perfil.",
+      "invalidName": "Nome inválido."
+    }
+  },
+  "theme": {
+    "title": "Tema",
+    "current": { "light": "Claro", "dark": "Escuro" },
+    "action": { "toggle": "alternar" }
+  },
+  "about": {
+    "title": "Sobre o App",
+    "appName": "Nome do aplicativo",
+    "gitSha": "Hash do commit",
+    "expoVersion": "Versão Expo",
+    "nativeVersion": "Versão nativa",
+    "buildNumber": "Número de build",
+    "runtime": "Ambiente de execução",
+    "apiBase": "Endpoint da API",
+    "pushEnv": "Ambiente de Push",
+    "close": "Fechar"
+  },
+  "push": {
+    "titleScreen": "Notificações Push",
+    "token": "Expo Push Token",
+    "noToken": "Sem token. Toque para solicitar.",
+    "requestPerms": "Solicitar Permissão",
+    "title": "Título",
+    "body": "Mensagem",
+    "send": "Enviar notificação",
+    "sampleTitle": "Nova moto adicionada",
+    "sampleBody": "Toque para abrir o inventário",
+    "newStock": {
+      "title": "Novo estoque adicionado",
+      "body": "Toque para abrir o inventário"
+    }
+  },
+  "login": {
+    "title": "Entrar",
+    "email": "E-mail",
+    "password": "Senha",
+    "noAccount": "Não tem uma conta? Cadastre-se"
+  },
+  "register": {
+    "title": "Cadastrar",
+    "email": "E-mail",
+    "password": "Senha",
+    "haveAccount": "Já tem uma conta? Entre"
+  }
+}

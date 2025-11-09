@@ -1,0 +1,191 @@
+{
+  "common": {
+    "close": "Cerrar",
+    "learnMore": "Saber más",
+    "save": "Guardar",
+    "saving": "Guardando...",
+    "cancel": "Cancelar",
+    "ok": "OK",
+    "edit": "Editar",
+    "remove": "Eliminar",
+    "removed": "Eliminado"
+  },
+  "tabs": {
+    "home": "Inicio",
+    "inventory": "Inventario",
+    "stocks": "Almacén",
+    "profile": "Perfil",
+    "about": "Acerca de"
+  },
+  "home": {
+    "welcome": "¡Bienvenido!",
+    "models": {
+      "pop": "Económica",
+      "e": "Eléctrica",
+      "sport": "Deportiva"
+    }
+  },
+  "topBar": {
+    "list": "Lista",
+    "grid": "Cuadrícula",
+    "searchPlaceholder": "Buscar por título o placa"
+  },
+  "categories": {
+    "title": "Categorías",
+    "all": "Todas"
+  },
+  "inventory": {
+    "title": "Inventario",
+    "emptyTitle": "No se encontraron motos",
+    "emptyHintGrid": "Intenta cambiar los filtros o busca otro término.",
+    "emptyHintList": "Agrega elementos o ajusta los filtros de búsqueda.",
+    "errors": {
+      "load": "Fallo al cargar inventario.",
+      "delete": "Fallo al eliminar elemento."
+    }
+  },
+  "actions": {
+    "close": "Cerrar",
+    "locate": "Localizar",
+    "signIn": "Iniciar Sesión",
+    "signUp": "Registrarse",
+    "add": "Agregar"
+  },
+  "motoDetail": {
+    "plate": "Placa: {{plate}}",
+    "stockTitle": "Almacén",
+    "stockName": "Nombre: {{name}}",
+    "stockAddress": "Dirección: {{address}}",
+    "noStock": "Sin almacén vinculado para esta moto."
+  },
+  "addMoto": {
+    "titlePlaceholder": "Título",
+    "platePlaceholder": "Placa",
+    "noStockPlaceholder": "Sin almacén"
+  },
+  "list": {
+    "plate": "Placa: {{plate}}",
+    "remove": "Eliminar"
+  },
+  "carousel": {
+    "autoDescription": "Conoce más sobre {{title}}{{dashSubTitle}}. Mira especificaciones, ventajas y para quién está indicada."
+  },
+  "stocks": {
+    "title": "Almacén",
+    "searchPlaceholder": "Buscar por nombre/ubicación",
+    "newButton": "Nuevo",
+    "emptyTitle": "No se encontraron almacenes",
+    "emptyHint": "Crea uno nuevo usando el botón “Nuevo”.",
+    "labels": {
+      "quantity": "Cant.: {{qty}}",
+      "location": "Ubicación: {{location}}"
+    },
+    "modal": {
+      "titleNew": "Nuevo almacén",
+      "titleEdit": "Editar almacén",
+      "name": "Nombre",
+      "quantity": "Cantidad",
+      "location": "Ubicación (opcional)"
+    },
+    "toast": {
+      "created": "Almacén creado",
+      "updated": "Almacén actualizado"
+    },
+    "errors": {
+      "generic": "No fue posible completar la operación.",
+      "load": "Fallo al cargar almacenes.",
+      "create": "Fallo al crear almacén.",
+      "update": "Fallo al actualizar almacén.",
+      "delete": "Fallo al eliminar almacén."
+    }
+  },
+  "profile": {
+    "title": "Mi Perfil",
+    "session": {
+      "title": "Sesión",
+      "loggedEmail": "Correo iniciado: {{email}}",
+      "signOut": "Cerrar sesión",
+      "signOutQuestion": "¿Deseas cerrar la sesión?"
+    },
+    "data": {
+      "title": "Datos del Perfil (Firebase)",
+      "namePlaceholder": "Nombre",
+      "nameTooShort": "Mínimo de 2 caracteres",
+      "nameLabel": "Nombre:",
+      "emailLabel": "Correo:",
+      "edit": "Editar Perfil"
+    },
+    "language": { "title": "Idioma" },
+    "appearance": { "title": "Apariencia" },
+    "toast": { "updated": "Perfil actualizado" },
+    "errors": {
+      "load": "Error al cargar el perfil.",
+      "save": "Error al guardar el perfil."
+    }
+  },
+  "auth": {
+    "errors": {
+      "emailExists": "Correo ya registrado.",
+      "invalidCredentials": "Credenciales inválidas.",
+      "tooManyAttempts": "Demasiados intentos. Inténtalo más tarde.",
+      "generic": "Ocurrió un error al autenticar."
+    }
+  },
+  "moto": {
+    "errors": {
+      "generic": "No fue posible completar la operación. Intente nuevamente."
+    }
+  },
+  "user": {
+    "errors": {
+      "notFound": "Usuario no encontrado.",
+      "load": "Fallo al cargar perfil.",
+      "update": "Fallo al actualizar perfil.",
+      "invalidName": "Nombre inválido."
+    }
+  },
+  "theme": {
+    "title": "Tema",
+    "current": { "light": "Claro", "dark": "Oscuro" },
+    "action": { "toggle": "alternar" }
+  },
+  "about": {
+    "title": "Acerca de la App",
+    "appName": "Nombre de la aplicación",
+    "gitSha": "Hash del commit",
+    "expoVersion": "Versión de Expo",
+    "nativeVersion": "Versión nativa",
+    "buildNumber": "Número de compilación",
+    "runtime": "Entorno de ejecución",
+    "apiBase": "Endpoint de la API",
+    "pushEnv": "Entorno de Push",
+    "close": "Cerrar"
+  },
+  "push": {
+    "titleScreen": "Notificaciones Push",
+    "token": "Token de Expo Push",
+    "noToken": "Sin token. Toque para solicitar.",
+    "requestPerms": "Solicitar Permiso",
+    "title": "Título",
+    "body": "Mensaje",
+    "send": "Enviar notificación",
+    "sampleTitle": "Nueva moto agregada",
+    "sampleBody": "Toque para abrir el inventario",
+    "newStock": {
+      "title": "Nuevo stock agregado",
+      "body": "Toque para abrir el inventario"
+    }
+  },
+  "login": {
+    "title": "Iniciar Sesión",
+    "email": "Correo",
+    "password": "Contraseña",
+    "noAccount": "¿No tienes una cuenta? Regístrate"
+  },
+  "register": {
+    "title": "Registrarse",
+    "email": "Correo",
+    "password": "Contraseña",
+    "haveAccount": "¿Ya tienes una cuenta? Inicia sesión"
+  }
+}

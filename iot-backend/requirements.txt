@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+paho-mqtt==1.6.1
+pymongo
+python-dotenv
+streamlit
+requests
+pytest
+httpx
+twilio
+opencv-python
