@@ -78,10 +78,26 @@ Isso demonstra o uso de **containers**, **infraestrutura como código** e **ambi
 
 ### 📱 Mobile (React Native + Expo)
 
-- O app em `/mobile`:
-  - Implementa **login, cadastro, estoque/estoque (Stocks)** e outras telas da Sprint.
-  - Na aba **IoT**, consome a API do backend em tempo quase real.
-  - Integra layout, tema e navegação com o restante do app já entregue em outras sprints.
+Na disciplina de **Mobile Development**, utilizamos **React Native com Expo** para construir o aplicativo que consome os dados do backend IoT e apresenta tudo de forma amigável para o usuário.
+
+No app mobile (`/mobile`), aplicamos conceitos vistos em aula, como:
+
+- Navegação com **React Navigation** (stack + bottom tabs);
+- Gerenciamento de estado e **Context API** para autenticação;
+- Consumo de APIs REST usando **axios**;
+- Organização em camadas (`view`, `control`, `model`, `service`);
+- Uso de **.env** para configuração de URLs da API.
+
+Dentro do app, além das telas já existentes (Login, Cadastro, Inventário, Estoque, Perfil, etc.), incluímos uma nova aba:
+
+- **Aba IoT**:
+  - Lista as motos monitoradas;
+  - Mostra status, bateria, movimento e localização;
+  - Permite selecionar qual moto está sendo analisada;
+  - Traz uma tela de **controle de estacionamento**, com ações como “Enviar para manutenção” e “Enviar para estacionamento”;
+  - Exibe o vídeo de visão computacional vindo do backend, integrando o front-end mobile com o cenário IoT.
+
+Dessa forma, demonstramos na prática os conteúdos da disciplina de **Mobile**, criando uma interface real para o projeto IoT da Sprint.
 
 ### 🤖 IoT e Visão Computacional
 
