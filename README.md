@@ -360,12 +360,10 @@ A aba **IoT** possui duas “sub-telas”, selecionadas por botões no topo:
 
 ---
 
-## 🎥 Vídeo(s) da Apresentação
+## 🎥 Vídeo da Apresentação
 
-- [Link 1 – Visão Geral do Projeto](#)
-- [Link 2 – Demonstração Mobile + IoT](#)
+- [Link 1 – Visão Geral do Projeto](https://youtu.be/CVI0HWdQHlg)
 
-(Substitua os `#` pelos links reais do YouTube.)
 
 ---
 
